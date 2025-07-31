@@ -1,4 +1,4 @@
-import { auth } from "../_components/auth";
+import { auth } from "../auth";
 
 export const metadata = {
   title: "Your account",

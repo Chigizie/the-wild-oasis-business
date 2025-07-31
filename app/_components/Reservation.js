@@ -1,5 +1,5 @@
 import { getBookedDatesByCabinId, getSettings } from "../_lib/data-service";
-import { auth } from "./auth";
+import { auth } from "../auth";
 import DateSelector from "./DateSelector";
 import { ReservationProvider } from "./ReservationContext.js";
 import ReservationForm from "./ReservationForm";

@@ -1,7 +1,7 @@
 import NextAuth from "next-auth";
 import Google from "next-auth/providers/google";
-import { createGuest, getGuest } from "../_lib/data-service";
-import { ca } from "date-fns/locale";
+import { createGuest, getGuest } from "./_lib/data-service";
+
 const authConfig = {
   providers: [
     Google({
@@ -30,7 +30,7 @@ const authConfig = {
 
     async session({ session, user }) {
       const guest = await getGuest(session.user.email);
-      session.user.guestId = guest.at(0).id;
+      session.user.guestId = guest?.id || null;
 
       return session;
     },

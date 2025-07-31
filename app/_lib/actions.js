@@ -1,6 +1,6 @@
 "use server";
 import { revalidatePath } from "next/cache";
-import { auth } from "../_components/auth";
+import { auth } from "../auth";
 import { supabase } from "./supabase";
 import { redirect } from "next/navigation";
 
